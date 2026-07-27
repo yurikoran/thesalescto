@@ -85,7 +85,7 @@ const SERVICES = [
 
 const CAREER_STATS = [
   { value: "15", suffix: " years", label: "As the customer (CIO, 100+ team)" },
-  { value: "14", suffix: " years", label: "As the vendor (Teradata, Ispirer)" },
+  { value: "14", suffix: " years", label: "As the vendor (enterprise tech)" },
   { value: "20+", suffix: "", label: "DWH projects ($10K–$1M+)" },
   { value: "1PB+", suffix: "", label: "Data volumes managed" },
 ];
@@ -443,10 +443,11 @@ function WhyMe() {
                 The Founder
               </h3>
               <p className="text-muted leading-relaxed mb-4">
-                CIO at A1 (100+ team) → Pre-Sales Manager at Teradata (Vienna)
-                → Solution Architect (80% win rate) → Trusted Advisor (10+
-                countries) → CTO at Ispirer (built pre-sales from scratch, 5x
-                growth).
+                From managing 100+ person IT teams to leading pre-sales and
+                sales across 10+ countries. 80% win rate on enterprise bids.
+                Built pre-sales functions from scratch. Drove 5x revenue growth.
+                Every step taught me one thing: technology sells when someone
+                in the room can translate it into business value.
               </p>
               <p className="text-muted leading-relaxed mb-6">
                 I&apos;m not an engineer who became a manager. I&apos;m a
@@ -461,7 +462,7 @@ function WhyMe() {
                   "Azure",
                   "Snowflake",
                   "Databricks",
-                  "Teradata",
+
                   "Challenger Sales",
                 ].map((cert) => (
                   <span
