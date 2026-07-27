@@ -182,7 +182,7 @@ function Navbar() {
             FAQ
           </a>
           <a
-            href="https://calendly.com/yuri-koran/discovery-call"
+            href="mailto:sales@thesalescto.com"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-primary-light transition-colors"
@@ -214,7 +214,7 @@ function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
-            href="https://calendly.com/yuri-koran/discovery-call"
+            href="mailto:sales@thesalescto.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent rounded-full hover:bg-accent-dark transition-colors shadow-lg shadow-accent/25"
@@ -440,7 +440,7 @@ function WhyMe() {
           <div className="flex flex-col sm:flex-row gap-8 items-start">
             <div className="flex-1">
               <h3 className="text-xl font-bold text-primary mb-4">
-                Yuri Koran
+                The Founder
               </h3>
               <p className="text-muted leading-relaxed mb-4">
                 CIO at A1 (100+ team) → Pre-Sales Manager at Teradata (Vienna)
@@ -549,7 +549,7 @@ function FAQandCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://calendly.com/yuri-koran/discovery-call"
+              href="mailto:sales@thesalescto.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary bg-white rounded-full hover:bg-white/90 transition-colors"
@@ -557,7 +557,7 @@ function FAQandCTA() {
               Book a Discovery Call
             </a>
             <a
-              href="mailto:yuri@thesalescto.com"
+              href="mailto:info@thesalescto.com"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 rounded-full hover:border-white hover:bg-white/10 transition-colors"
             >
               Email Me
@@ -576,12 +576,12 @@ function Footer() {
         <div>
           <p className="text-lg font-bold text-primary">The Sales CTO</p>
           <p className="text-sm text-muted mt-1">
-            © {new Date().getFullYear()} Yuri Koran. All rights reserved.
+            © {new Date().getFullYear()} The Sales CTO. All rights reserved.
           </p>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted">
           <a
-            href="https://linkedin.com/in/yurikoran"
+            href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"
@@ -589,13 +589,13 @@ function Footer() {
             LinkedIn
           </a>
           <a
-            href="mailto:yuri@thesalescto.com"
+            href="mailto:info@thesalescto.com"
             className="hover:text-accent transition-colors"
           >
-            yuri@thesalescto.com
+            info@thesalescto.com
           </a>
           <a
-            href="https://calendly.com/yuri-koran/discovery-call"
+            href="mailto:sales@thesalescto.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"

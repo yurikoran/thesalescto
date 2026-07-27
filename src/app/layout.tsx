@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "The Sales CTO | Fractional Sales CTO & Pre-Sales Consulting",
   description:
-    "I'm Yuri Koran — your embedded Sales CTO. I help B2B tech companies close enterprise deals with technical credibility. 80% win rate. 5x revenue growth. Book a discovery call.",
+    "Your embedded Sales CTO — helping B2B tech companies close enterprise deals with technical credibility. 80% win rate. 5x revenue growth. Book a discovery call.",
   keywords: [
     "fractional sales CTO",
     "sales CTO consulting",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     "enterprise sales consulting",
     "B2B sales technical support",
   ],
-  authors: [{ name: "Yuri Koran", url: "https://thesalescto.com" }],
-  creator: "Yuri Koran",
+  authors: [{ name: "The Sales CTO", url: "https://thesalescto.com" }],
+  creator: "The Sales CTO",
   metadataBase: new URL("https://thesalescto.com"),
   openGraph: {
     type: "website",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "The Sales CTO - Yuri Koran",
+        alt: "The Sales CTO",
       },
     ],
   },
@@ -92,16 +92,16 @@ export default function RootLayout({
                 "Fractional Sales CTO and pre-sales consulting for B2B tech companies. Turning technology into revenue.",
               founder: {
                 "@type": "Person",
-                name: "Yuri Koran",
+                name: "The Sales CTO Founder",
                 jobTitle: "Sales CTO",
                 url: "https://thesalescto.com/about",
                 sameAs: [
-                  "https://linkedin.com/in/yurikoran",
+                  "https://linkedin.com",
                 ],
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                email: "yuri@thesalescto.com",
+                email: "info@thesalescto.com",
                 contactType: "customer service",
                 availableLanguage: ["English", "Russian"],
               },
