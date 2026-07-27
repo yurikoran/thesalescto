@@ -78,6 +78,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="qUja6v6k_CJ1xnrJWRV_GG0WZSg8o9GhKjvd51uGx0U" />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
