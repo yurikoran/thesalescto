@@ -80,6 +80,17 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="qUja6v6k_CJ1xnrJWRV_GG0WZSg8o9GhKjvd51uGx0U" />
         <link rel="icon" href="/favicon.ico" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVCGK8HQ7S"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CVCGK8HQ7S');
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
