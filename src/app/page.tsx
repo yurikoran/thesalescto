@@ -290,7 +290,7 @@ function WhatIsSalesCTO() {
         </div>
         <div className="bg-surface rounded-2xl p-8 sm:p-12 border border-border">
           <p className="text-lg text-foreground leading-relaxed mb-8">
-            A <strong>Sales CTO</strong> is a senior technical leader who sits at
+            A <strong>Sales CTO </strong>is a senior technical leader who sits at
             the intersection of technology and revenue. Not a fractional CTO who
             optimizes your architecture. Not a sales consultant who teaches
             methodology. A CTO who earns your buyer&apos;s trust, sits in your
