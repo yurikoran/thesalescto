@@ -182,7 +182,7 @@ function Navbar() {
             FAQ
           </a>
           <a
-            href="mailto:sales@thesalescto.com"
+            href="https://calendly.com/thesalescto/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-primary-light transition-colors"
@@ -214,7 +214,7 @@ function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
-            href="mailto:sales@thesalescto.com"
+            href="https://calendly.com/thesalescto/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent rounded-full hover:bg-accent-dark transition-colors shadow-lg shadow-accent/25"
@@ -550,7 +550,7 @@ function FAQandCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:sales@thesalescto.com"
+              href="https://calendly.com/thesalescto/discovery-call"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary bg-white rounded-full hover:bg-white/90 transition-colors"
@@ -596,7 +596,7 @@ function Footer() {
             info@thesalescto.com
           </a>
           <a
-            href="mailto:sales@thesalescto.com"
+            href="https://calendly.com/thesalescto/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"
