@@ -97,34 +97,34 @@ function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: str
 const STATS = [
   { value: "5", suffix: "x", label: "Services revenue growth in 1 year" },
   { value: "Pre-sales", suffix: "", label: "Built from scratch" },
-  { value: "29", suffix: " yrs", label: "Client-side & vendor-side" },
+  { value: "28", suffix: " yrs", label: "Client-side & vendor-side" },
   { value: "3", suffix: "x", label: "Field/Sales CTO demand since 2021" },
 ];
 
 const PROBLEMS = [
   {
-    icon: "🎯",
-    title: "Your sales team can demo, but can't answer the buyer's CTO",
+    icon: "📋",
+    title: "Your pre-sales shows up with no slides, no homework, no plan",
     description:
-      "Demos close SMBs. Technical credibility closes enterprises. If your team goes silent when the buyer's CTO asks about architecture, you're losing deals.",
+      "In 28 years on both sides — buying from vendors and selling to customers — I've watched the same scene play out hundreds of times. The pre-sales engineer opens a blank screen or a product overview deck. No research on the customer's industry. No understanding of their architecture. No presentation tailored to their problems. No written plan for how the solution will be delivered. The customer asks about their specific database migration path, their compliance requirements, their integration with legacy systems — and the response is a feature walkthrough. The customer hears: 'I didn't prepare for you. I prepared my product.'",
+  },
+  {
+    icon: "🔄",
+    title: "Your pre-sales sells from the vendor's point of view, not the customer's",
+    description:
+      "The default pre-sales mindset is: 'Here's what we built. Here's how it works. Buy it.' But an enterprise CTO or VP Engineering doesn't need to know how your product works. They need to know: does this solve my problem? Does it reduce my risk? Can my team maintain it after you leave? What if our requirements change in 6 months? Without someone who has actually been the buyer — who has managed 100+ person IT teams, evaluated vendors, written RFPs, and made purchase decisions — the conversation stays on the vendor's terms. The customer stays skeptical. The deal stalls.",
   },
   {
     icon: "💸",
-    title: "You spend 10x more on sales than on pre-sales",
+    title: "You invest 10x more in sales than in pre-sales — and lose because of it",
     description:
-      "The budget is inverted. Most companies invest $500K in sales and $50K in pre-sales. Yet pre-sales generates pipeline, increases ACV, and shortens sales cycles. It's treated as support — not the revenue engine it actually is.",
-  },
-  {
-    icon: "⏳",
-    title: "Hiring a VP Sales takes 6-9 months — with a 67% failure rate",
-    description:
-      "Two out of three VP Sales hires fail within 18 months. That's a $500K+ gamble with a year of lost momentum.",
+      "Most B2B tech companies spend $500K on sales headcount and $50K on pre-sales. But think about where a complex enterprise deal is actually won or lost: in the technical discovery. In the architecture review. In the security assessment. In the moment when the buyer's CTO asks a hard question and your person in the room either answers with credibility — or doesn't. The budget is inverted: you're paying for pipeline, not for trust. And in enterprise B2B, trust is what closes.",
   },
   {
     icon: "🤝",
-    title: "No one in the room has both technical depth and sales instinct",
+    title: "Nobody in the room is building trust — they're just presenting features",
     description:
-      "Your engineers can't sell. Your sellers can't talk architecture. You need someone who does both — and loves it.",
+      "Your team can demo. They can explain functionality. But can they sit with a buyer's CTO and say honestly: 'I understand your migration concerns. I led a 100+ person IT team for years. I've managed 20+ projects with 1PB+ data volumes. Here's what we did in a similar situation. Here's what we'd recommend for you — and here's what we wouldn't do, and why.' That's not a sales conversation. That's a peer conversation. One that earns trust. One that changes how the buyer sees you — from vendor to advisor. And it's the moment when deals stop stalling and start closing.",
   },
 ];
 
@@ -383,12 +383,13 @@ function Problem() {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-              Sound familiar?
+              Does this sound like your pre-sales?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Most B2B tech companies face the same revenue bottleneck — and
-              don&apos;t realize it&apos;s a pre-sales problem, not a sales
-              problem.
+              After 28 years on both sides of the table — buying from vendors as a CIO, then selling to customers
+              as a CTO — I&apos;ve seen the same patterns destroy deals again and again. Pre-sales is where trust is
+              built or broken. Most teams don&apos;t fail because of the product. They fail because they show up
+              unprepared, sell from the vendor side, and never shift from presenting features to building trust.
             </p>
           </div>
         </FadeIn>
