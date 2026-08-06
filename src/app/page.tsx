@@ -155,7 +155,7 @@ const ADJACENT_SERVICES = [
     icon: "☁️",
     title: "Migration Advisory",
     description:
-      "Database migration, Application modernization.",
+      "Database migration and application modernization advisory.",
     href: "/services/migration-advisory",
   },
 ];
@@ -481,7 +481,7 @@ function WhatIsSalesCTO() {
                     <td className="text-center py-3 px-3">$50-150K</td>
                     <td className="text-center py-3 px-3">$250-450K</td>
                     <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5">
-                      $90-150K
+                      $60-120K
                     </td>
                   </tr>
                   <tr className="border-b border-border/50">
