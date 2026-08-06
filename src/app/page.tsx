@@ -106,7 +106,7 @@ const PROBLEMS = [
     icon: "📋",
     title: "Your pre-sales shows up with no slides, no homework, no plan",
     description:
-      "In 28 years on both sides - spending half my career buying from vendors and half selling to customers - I've watched this scene play out over and over again. The pre-sales engineer opens a blank screen or a product overview deck. No research on the customer's industry. No understanding of their architecture. No presentation tailored to their problems. No written plan for how the solution will be delivered. The customer asks about their specific project pain, their compliance requirements, their integration with legacy systems - and the response is a feature walkthrough. The customer hears a lot about the vendor and the solution - and nothing about his own pain, or how others on the market face the same challenge. Each call should be an educational call - one that leaves the customer knowing more about their own problem than before we arrived. Too often, it's not.",
+      "In 28 years on both sides - half buying, half selling - I've watched the same scene again and again. The pre-sales engineer opens a blank screen or a product overview deck. No research on the customer's industry. No understanding of their architecture. No presentation tailored to their problems. No plan for how the solution will be delivered. The customer asks about their project pain, their compliance, their legacy integration - and gets a feature walkthrough. The customer hears about the vendor and the solution - and nothing about their own pain, or how others in the market face the same challenge.",
   },
   {
     icon: "🔄",
