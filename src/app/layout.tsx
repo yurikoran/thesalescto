@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     "field CTO",
     "fractional field CTO",
     "pre-sales consulting",
-    "technical due diligence",
     "CTO as a service",
     "pre-sales function build out",
     "fractional CTO",
@@ -126,10 +125,8 @@ export default function RootLayout({
                 "Embedded Sales CTO",
                 "Field CTO",
                 "Pre-Sales Consulting",
-                "Technical Due Diligence",
                 "CTO as a Service",
                 "Migration Advisory",
-                "Sales Team Training",
               ],
             }),
           }}

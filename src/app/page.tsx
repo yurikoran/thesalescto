@@ -118,7 +118,7 @@ const PROBLEMS = [
     icon: "💸",
     title: "You invest 10x more in sales than in pre-sales - and lose because of it",
     description:
-      "Most B2B tech companies spend $500K on sales headcount and $50K on pre-sales. But think about where a complex enterprise deal is actually won or lost: in the technical discovery. In the architecture review. In the security assessment. In the moment when the buyer's CTO asks a hard question and your person in the room either answers with credibility - or doesn't. The budget is inverted: you're paying for pipeline, not for trust. And in enterprise B2B, trust is what closes.",
+      "Most B2B tech companies spend $500K+ on sales headcount and $50K+ on pre-sales. But think about where a complex enterprise deal is actually won or lost: in the technical discovery. In the architecture review. In the security assessment. In the moment when the buyer's CTO asks a hard question and your person in the room either answers with credibility - or doesn't. The budget is inverted: you're paying for pipeline, not for trust. And in enterprise B2B, trust is what closes.",
   },
   {
     icon: "🤝",
@@ -145,13 +145,6 @@ const ADJACENT_SERVICES = [
     href: "/services/pre-sales-build-out",
   },
   {
-    icon: "🔍",
-    title: "Technical Due Diligence",
-    description:
-      "Evaluate technology companies for investors: architecture, team, scalability, risk.",
-    href: "/services/technical-due-diligence",
-  },
-  {
     icon: "🚀",
     title: "CTO-as-a-Service",
     description:
@@ -164,13 +157,6 @@ const ADJACENT_SERVICES = [
     description:
       "Database migration, Application modernization.",
     href: "/services/migration-advisory",
-  },
-  {
-    icon: "🎓",
-    title: "Sales Team Training",
-    description:
-      "Train your team on technical selling and C-level conversations.",
-    href: "/services/sales-training",
   },
 ];
 
@@ -216,7 +202,7 @@ const FAQS = [
   {
     question: "How much does it cost?",
     answer:
-      "Engagements start at $3,000/month on a retainer + success fee model. If the deal doesn't close, I lose too. This isn't consulting - it's a partnership. Typical engagements run 3-6 months minimum.",
+      "Engagements start at an agreed amount per month on a retainer. If the deal doesn't close, I lose too - this isn't consulting, it's a partnership. Typical engagements run 3-6 months minimum.",
   },
   {
     question: "What's the first step?",
@@ -495,7 +481,7 @@ function WhatIsSalesCTO() {
                     <td className="text-center py-3 px-3">$50-150K</td>
                     <td className="text-center py-3 px-3">$250-450K</td>
                     <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5">
-                      $36-96K
+                      $90-150K
                     </td>
                   </tr>
                   <tr className="border-b border-border/50">
@@ -504,15 +490,15 @@ function WhatIsSalesCTO() {
                     <td className="text-center py-3 px-3">2-4 weeks</td>
                     <td className="text-center py-3 px-3">6-9 months</td>
                     <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5">
-                      1 week
+                      1-2 weeks
                     </td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4 font-medium">Failure rate</td>
-                    <td className="text-center py-3 px-3">Low</td>
-                    <td className="text-center py-3 px-3">Low</td>
+                    <td className="text-center py-3 px-3 text-muted">Low</td>
+                    <td className="text-center py-3 px-3 text-muted">Low</td>
                     <td className="text-center py-3 px-3 text-red-500 font-semibold">
-                      67%
+                      High
                     </td>
                     <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5 rounded-b-lg">
                       Low
@@ -520,6 +506,9 @@ function WhatIsSalesCTO() {
                   </tr>
                 </tbody>
               </table>
+              <p className="text-xs text-muted mt-3 text-left">
+                Failure rate: the share of hires who underperform or leave within their first 18 months in the role. A full-time VP of Sales carries the highest risk of a costly hire that doesn&apos;t work out.
+              </p>
             </div>
           </div>
         </FadeIn>
@@ -611,7 +600,7 @@ function WhyMe() {
               Why Me?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              15 years as the customer. 14 years as the vendor. I&apos;ve sat on
+              14 years as the customer. 14 years as the vendor. I&apos;ve sat on
               every side of the table.
             </p>
           </div>
@@ -647,22 +636,6 @@ function WhyMe() {
               Pre-sales, sales, and account management bring me genuine pleasure
               - and that passion is what makes me effective in your deals.
             </p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "AWS",
-                "Azure",
-                "Snowflake",
-                "Databricks",
-                "Challenger Sales",
-              ].map((cert) => (
-                <span
-                  key={cert}
-                  className="px-3 py-1.5 text-xs font-medium bg-white border border-border rounded-full text-muted hover:border-accent hover:text-accent transition-colors"
-                >
-                  {cert}
-                </span>
-              ))}
-            </div>
           </div>
         </FadeIn>
       </div>
@@ -680,7 +653,7 @@ function HowItWorks() {
               How It Works
             </h2>
             <p className="text-lg text-muted">
-              Three steps. No lock-in. Data-driven decisions.
+              Three steps. No lock-in.
             </p>
           </div>
         </FadeIn>
@@ -780,14 +753,6 @@ function Footer() {
           </p>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted">
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-          >
-            LinkedIn
-          </a>
           <a
             href="mailto:info@thesalescto.com"
             className="hover:text-accent transition-colors"
