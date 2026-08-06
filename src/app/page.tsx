@@ -95,10 +95,10 @@ function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: str
 // ============================================================
 
 const STATS = [
-  { value: "80", suffix: "%", label: "Win rate on bids" },
-  { value: "5", suffix: "x", label: "Service project growth" },
-  { value: "100", suffix: "+", label: "Team managed" },
-  { value: "10", suffix: "+", label: "Countries served" },
+  { value: "5", suffix: "x", label: "Revenue growth in 1 year" },
+  { value: "0", suffix: " → full team", label: "Pre-sales built from scratch" },
+  { value: "29", suffix: " yrs", label: "Both sides of the table" },
+  { value: "3", suffix: "x", label: "Field CTO demand since 2021" },
 ];
 
 const PROBLEMS = [
@@ -110,9 +110,9 @@ const PROBLEMS = [
   },
   {
     icon: "💸",
-    title: "You spend $500K on sales and $50K on pre-sales",
+    title: "You spend 10x more on sales than on pre-sales",
     description:
-      "The budget is inverted. Pre-sales generates pipeline, increases ACV, and shortens sales cycles — but it's treated as support, not a revenue engine.",
+      "The budget is inverted. Most companies invest $500K in sales and $50K in pre-sales. Yet pre-sales generates pipeline, increases ACV, and shortens sales cycles. It's treated as support — not the revenue engine it actually is.",
   },
   {
     icon: "⏳",
@@ -353,12 +353,16 @@ function Hero() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto">
           {STATS.map((stat, i) => (
             <FadeIn key={stat.label} delay={0.4 + i * 0.1}>
               <div className="text-center">
                 <p className="text-3xl sm:text-4xl font-bold text-primary">
-                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                  {stat.value === "0" ? (
+                    <span>0{stat.suffix}</span>
+                  ) : (
+                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                  )}
                 </p>
                 <p className="text-xs sm:text-sm text-muted mt-2">
                   {stat.label}
