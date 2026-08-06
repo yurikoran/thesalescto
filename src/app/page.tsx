@@ -95,10 +95,10 @@ function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: str
 // ============================================================
 
 const STATS = [
-  { value: "5", suffix: "x", label: "Revenue growth in 1 year" },
-  { value: "0", suffix: " → full team", label: "Pre-sales built from scratch" },
-  { value: "29", suffix: " yrs", label: "Both sides of the table" },
-  { value: "3", suffix: "x", label: "Field CTO demand since 2021" },
+  { value: "5", suffix: "x", label: "Services revenue growth in 1 year" },
+  { value: "Pre-sales", suffix: "", label: "Built from scratch" },
+  { value: "29", suffix: " yrs", label: "Client-side & vendor-side" },
+  { value: "3", suffix: "x", label: "Field/Sales CTO demand since 2021" },
 ];
 
 const PROBLEMS = [
@@ -358,8 +358,8 @@ function Hero() {
             <FadeIn key={stat.label} delay={0.4 + i * 0.1}>
               <div className="text-center">
                 <p className="text-3xl sm:text-4xl font-bold text-primary">
-                  {stat.value === "0" ? (
-                    <span>0{stat.suffix}</span>
+                  {isNaN(Number(stat.value)) ? (
+                    <span>{stat.value}{stat.suffix}</span>
                   ) : (
                     <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                   )}
