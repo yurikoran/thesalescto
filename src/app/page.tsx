@@ -128,56 +128,57 @@ const PROBLEMS = [
   },
 ];
 
-const SERVICES = [
-  {
-    icon: "👔",
-    title: "Fractional Sales CTO",
-    description:
-      "Your embedded partner in turning technology into revenue. I sit in your calls, your deals, your team.",
-    href: "/services/fractional-sales-cto",
-  },
+const HERO_SERVICE = {
+  icon: "👔",
+  title: "The Embedded Sales CTO",
+  description:
+    "I join your team for 90 days or more. I sit in your calls, your deals, your architecture reviews. I help your sales team turn technical credibility into closed revenue - and I stay until the deal closes, not until the deck is done.",
+  href: "/services/fractional-sales-cto",
+};
+
+const ADJACENT_SERVICES = [
   {
     icon: "🏗️",
     title: "Pre-Sales Build-Out",
     description:
-      "Build your pre-sales function from zero - team, processes, materials, templates, training.",
+      "Build your pre-sales function from zero: team, process, materials, training.",
     href: "/services/pre-sales-build-out",
   },
   {
     icon: "🔍",
     title: "Technical Due Diligence",
     description:
-      "Evaluate technology companies for investors - architecture, team, scalability, risk.",
+      "Evaluate technology companies for investors: architecture, team, scalability, risk.",
     href: "/services/technical-due-diligence",
   },
   {
     icon: "🚀",
     title: "CTO-as-a-Service",
     description:
-      "Part-time CTO for startups - technical strategy, architecture decisions, team building.",
+      "Part-time CTO for early-stage startups: technical strategy, architecture, team-building.",
     href: "/services/cto-as-a-service",
   },
   {
     icon: "☁️",
-    title: "Data & Cloud Migration",
+    title: "Migration Advisory",
     description:
-      "Advisory on database migration, cloud transformation, data platform strategy.",
+      "Database migration, Application modernization.",
     href: "/services/migration-advisory",
   },
   {
     icon: "🎓",
     title: "Sales Team Training",
     description:
-      "Train your team on technical selling, C-level conversations, and closing enterprise deals.",
+      "Train your team on technical selling and C-level conversations.",
     href: "/services/sales-training",
   },
 ];
 
 const CAREER_STATS = [
-  { value: "15", suffix: " years", label: "As the customer (CIO, 100+ team)" },
-  { value: "14", suffix: " years", label: "As the vendor (enterprise tech)" },
-  { value: "20+", suffix: "", label: "DWH projects ($10K–$1M+)" },
-  { value: "1PB+", suffix: "", label: "Data volumes managed" },
+  { value: "CIO", suffix: "", label: "Led a 100+ person IT division as customer" },
+  { value: "Pre-Sales", suffix: "", label: "Manager & Solution Architect at vendor" },
+  { value: "CTO", suffix: "", label: "Built the pre-sales function from scratch" },
+  { value: "Trusted", suffix: "", label: "Advisor to enterprise clients in 10+ countries" },
 ];
 
 const STEPS = [
@@ -205,7 +206,7 @@ const FAQS = [
   {
     question: "What is a Sales CTO?",
     answer:
-      "A Sales CTO is a senior technical leader who sits at the intersection of technology and revenue. Not a fractional CTO who optimizes your architecture. Not a sales consultant who teaches methodology. A CTO who earns your buyer's trust, sits in your enterprise deals, and helps you close.",
+      "A Sales CTO is the established Field CTO role, delivered fractionally and on demand. Like a Field CTO, it's a senior technical leader who works externally with prospects and customers - but instead of being a full-time hire, I join your team part-time to sit in your enterprise deals, earn the buyer's trust, and help you close.",
   },
   {
     question: "How is a Sales CTO different from a fractional CTO?",
@@ -314,7 +315,7 @@ function Hero() {
       <div className="max-w-4xl mx-auto text-center">
         <FadeIn>
           <p className="text-sm font-semibold text-accent uppercase tracking-[0.2em] mb-6">
-            Fractional Sales CTO &amp; Pre-Sales Consulting
+            Fractional Field CTO &amp; Pre-Sales Consulting
           </p>
         </FadeIn>
 
@@ -424,19 +425,31 @@ function WhatIsSalesCTO() {
               What is a Sales CTO?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              A new category of technical leadership - built for revenue, not
-              just architecture.
+              An established role, now available on demand.
             </p>
           </div>
         </FadeIn>
         <FadeIn delay={0.2}>
           <div className="bg-surface rounded-2xl p-8 sm:p-12 border border-border glow">
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              Your CTO builds the product. Your VP Sales sells it. Nobody owns
+              the gap between them - the room where a technical buyer decides
+              whether to trust you.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              That gap needs its own role. In enterprise software, it&apos;s
+              already a growing function - the <strong>Field CTO</strong>, a
+              senior technical leader who works externally with prospects and
+              customers, translating complex capabilities into business value. I
+              call my version a <strong>Sales CTO</strong>: the Field CTO role,
+              delivered fractionally, on demand.
+            </p>
             <p className="text-lg text-foreground leading-relaxed mb-8">
-              A <strong>Sales CTO </strong>is a senior technical leader who sits
-              at the intersection of technology and revenue. Not a fractional
-              CTO who optimizes your architecture. Not a sales consultant who
-              teaches methodology. A CTO who earns your buyer&apos;s trust, sits
-              in your enterprise deals, and helps you close.
+              Not a fractional CTO who reviews your architecture and leaves. Not
+              a sales consultant who teaches a methodology and leaves. A senior
+              technical leader who sits in your enterprise deals, earns the
+              buyer&apos;s trust, and stays until the deal closes. Someone
+              who&apos;s actually sat in the room - on both sides.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -525,19 +538,54 @@ function Services() {
               How I Help
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Six ways to turn your technology into revenue. Each backed by 29
-              years of doing it.
+              One core engagement. A few adjacent ways to work together if
+              that&apos;s a better fit.
             </p>
           </div>
         </FadeIn>
+
+        {/* Hero service - the main offer */}
+        <FadeIn>
+          <div className="relative overflow-hidden bg-primary rounded-3xl p-8 sm:p-12 text-white mb-12 shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-50" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-full blur-3xl" />
+            <div className="relative">
+              <span className="text-4xl mb-4 block">{HERO_SERVICE.icon}</span>
+              <p className="inline-block text-xs font-semibold tracking-widest uppercase bg-accent/20 text-accent-foreground px-3 py-1 rounded-full mb-4">
+                Main offer
+              </p>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+                {HERO_SERVICE.title}
+              </h3>
+              <p className="text-lg text-white/80 leading-relaxed max-w-3xl mb-8">
+                {HERO_SERVICE.description}
+              </p>
+              <a
+                href="https://calendly.com/thesalescto/discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary bg-white rounded-full hover:bg-white/90 transition-all shadow-lg hover:-translate-y-0.5"
+              >
+                Book a Discovery Call
+              </a>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Adjacent services */}
+        <FadeIn>
+          <h3 className="text-xl font-semibold text-primary mb-6 text-center">
+            Also available, if your situation calls for it:
+          </h3>
+        </FadeIn>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((service, i) => (
+          {ADJACENT_SERVICES.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
               <div className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/30 transition-all duration-300 group h-full">
                 <span className="text-3xl mb-4 block">{service.icon}</span>
-                <h3 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
+                <h4 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                   {service.title}
-                </h3>
+                </h4>
                 <p className="text-muted text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
@@ -585,11 +633,13 @@ function WhyMe() {
           <div className="bg-surface rounded-2xl p-8 sm:p-12 border border-border">
             <h3 className="text-xl font-bold text-primary mb-4">The Founder</h3>
             <p className="text-muted leading-relaxed mb-4">
-              From managing 100+ person IT teams to leading pre-sales and sales
-              across 10+ countries. 80% win rate on enterprise bids. Built
-              pre-sales functions from scratch. Drove 5x revenue growth. Every
-              step taught me one thing: technology sells when someone in the room
-              can translate it into business value.
+              My career is split evenly between the two sides of the table. First
+              I led a 100+ person IT division - the customer who evaluates
+              vendors, writes RFPs, and makes the final call. Then I moved to the
+              vendor side, worked as a Pre-Sales Manager and Solution Architect,
+              and later became CTO. Every role taught me the same lesson from a
+              different angle: technology sells when someone in the room can
+              translate it into the buyer&apos;s business value.
             </p>
             <p className="text-muted leading-relaxed mb-6">
               I&apos;m not an engineer who became a manager. I&apos;m a

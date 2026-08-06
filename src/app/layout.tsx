@@ -13,12 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Sales CTO | Fractional Sales CTO & Pre-Sales Consulting",
+  title: "The Sales CTO | Fractional Field CTO & Pre-Sales Consulting",
   description:
-    "Your embedded Sales CTO — helping B2B tech companies close enterprise deals with technical credibility. 80% win rate. 5x revenue growth. Book a discovery call.",
+    "Your embedded Field CTO, delivered fractionally. I help B2B tech companies close enterprise deals by turning technical credibility into revenue. Book a discovery call.",
   keywords: [
     "fractional sales CTO",
     "sales CTO consulting",
+    "field CTO",
+    "fractional field CTO",
     "pre-sales consulting",
     "technical due diligence",
     "CTO as a service",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://thesalescto.com",
     siteName: "The Sales CTO",
-    title: "The Sales CTO | Your Embedded Partner in Turning Technology Into Revenue",
+    title: "The Sales CTO | Your Embedded Field CTO, On Demand",
     description:
       "Not a consultant who advises and leaves. Not a vendor who delivers and disappears. A partner who shares the risk, owns the result, and stays until the deal closes.",
     images: [
@@ -49,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Sales CTO | Fractional Sales CTO & Pre-Sales Consulting",
+    title: "The Sales CTO | Fractional Field CTO & Pre-Sales Consulting",
     description:
-      "Your embedded Sales CTO — turning technology into revenue. 80% win rate. Book a discovery call.",
+      "Your embedded Field CTO, delivered fractionally. Turning technical credibility into revenue.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -103,11 +105,11 @@ export default function RootLayout({
               url: "https://thesalescto.com",
               logo: "https://thesalescto.com/logo.png",
               description:
-                "Fractional Sales CTO and pre-sales consulting for B2B tech companies. Turning technology into revenue.",
+                "Fractional Field CTO and pre-sales consulting for B2B tech companies. Turning technology into revenue.",
               founder: {
                 "@type": "Person",
                 name: "The Sales CTO Founder",
-                jobTitle: "Sales CTO",
+                jobTitle: "Field CTO",
                 url: "https://thesalescto.com/about",
                 sameAs: [
                   "https://linkedin.com",
@@ -121,11 +123,12 @@ export default function RootLayout({
               },
               areaServed: "Worldwide",
               serviceType: [
-                "Fractional Sales CTO",
+                "Embedded Sales CTO",
+                "Field CTO",
                 "Pre-Sales Consulting",
                 "Technical Due Diligence",
                 "CTO as a Service",
-                "Data Migration Advisory",
+                "Migration Advisory",
                 "Sales Team Training",
               ],
             }),
