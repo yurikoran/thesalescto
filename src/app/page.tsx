@@ -97,7 +97,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: str
 const STATS = [
   { value: "5", suffix: "x", label: "Services revenue growth in 1 year" },
   { value: "Pre-sales", suffix: "", label: "Built from scratch" },
-  { value: "28", suffix: " yrs", label: "Client-side & vendor-side" },
+  { value: "50/50", suffix: "", label: "Client & vendor side experience" },
   { value: "3", suffix: "x", label: "Field/Sales CTO demand since 2021" },
 ];
 
@@ -106,25 +106,25 @@ const PROBLEMS = [
     icon: "📋",
     title: "Your pre-sales shows up with no slides, no homework, no plan",
     description:
-      "In 28 years on both sides — buying from vendors and selling to customers — I've watched the same scene play out hundreds of times. The pre-sales engineer opens a blank screen or a product overview deck. No research on the customer's industry. No understanding of their architecture. No presentation tailored to their problems. No written plan for how the solution will be delivered. The customer asks about their specific database migration path, their compliance requirements, their integration with legacy systems — and the response is a feature walkthrough. The customer hears: 'I didn't prepare for you. I prepared my product.'",
+      "In 28 years on both sides - spending half my career buying from vendors and half selling to customers - I've watched this scene play out over and over again. The pre-sales engineer opens a blank screen or a product overview deck. No research on the customer's industry. No understanding of their architecture. No presentation tailored to their problems. No written plan for how the solution will be delivered. The customer asks about their specific project pain, their compliance requirements, their integration with legacy systems - and the response is a feature walkthrough. The customer hears a lot about the vendor and the solution - and nothing about his own pain, or how others on the market face the same challenge. Each call should be an educational call - one that leaves the customer knowing more about their own problem than before we arrived. Too often, it's not.",
   },
   {
     icon: "🔄",
     title: "Your pre-sales sells from the vendor's point of view, not the customer's",
     description:
-      "The default pre-sales mindset is: 'Here's what we built. Here's how it works. Buy it.' But an enterprise CTO or VP Engineering doesn't need to know how your product works. They need to know: does this solve my problem? Does it reduce my risk? Can my team maintain it after you leave? What if our requirements change in 6 months? Without someone who has actually been the buyer — who has managed 100+ person IT teams, evaluated vendors, written RFPs, and made purchase decisions — the conversation stays on the vendor's terms. The customer stays skeptical. The deal stalls.",
+      "The default pre-sales mindset is: 'Here's what we built. Here's how it works. Buy it.' But an enterprise CTO or VP Engineering doesn't need to know how your product works. They need to know: does this solve my problem? Does it reduce my risk? Can my team maintain it after you leave? What if our requirements change in 6 months? Without someone who has actually been the buyer - who evaluated vendors, knew how the buying process works, wrote RFPs, and made purchase decisions - the conversation stays on the vendor's terms. The customer stays skeptical. The deal stalls.",
   },
   {
     icon: "💸",
-    title: "You invest 10x more in sales than in pre-sales — and lose because of it",
+    title: "You invest 10x more in sales than in pre-sales - and lose because of it",
     description:
-      "Most B2B tech companies spend $500K on sales headcount and $50K on pre-sales. But think about where a complex enterprise deal is actually won or lost: in the technical discovery. In the architecture review. In the security assessment. In the moment when the buyer's CTO asks a hard question and your person in the room either answers with credibility — or doesn't. The budget is inverted: you're paying for pipeline, not for trust. And in enterprise B2B, trust is what closes.",
+      "Most B2B tech companies spend $500K on sales headcount and $50K on pre-sales. But think about where a complex enterprise deal is actually won or lost: in the technical discovery. In the architecture review. In the security assessment. In the moment when the buyer's CTO asks a hard question and your person in the room either answers with credibility - or doesn't. The budget is inverted: you're paying for pipeline, not for trust. And in enterprise B2B, trust is what closes.",
   },
   {
     icon: "🤝",
-    title: "Nobody in the room is building trust — they're just presenting features",
+    title: "Nobody in the room is building trust - they're just presenting features",
     description:
-      "Your team can demo. They can explain functionality. But can they sit with a buyer's CTO and say honestly: 'I understand your migration concerns. I led a 100+ person IT team for years. I've managed 20+ projects with 1PB+ data volumes. Here's what we did in a similar situation. Here's what we'd recommend for you — and here's what we wouldn't do, and why.' That's not a sales conversation. That's a peer conversation. One that earns trust. One that changes how the buyer sees you — from vendor to advisor. And it's the moment when deals stop stalling and start closing.",
+      "Your team can demo. They can explain functionality. But can they sit with a buyer's CTO and say honestly: 'I understand your migration concerns. I led a 100+ person IT team for years. I've managed 20+ projects with 1PB+ data volumes. Here's what we did in a similar situation. Here's what we'd recommend for you - and here's what we wouldn't do, and why.' That's not a sales conversation. That's a peer conversation. One that earns trust. One that changes how the buyer sees you - from vendor to advisor. And it's the moment when deals stop stalling and start closing.",
   },
 ];
 
@@ -140,21 +140,21 @@ const SERVICES = [
     icon: "🏗️",
     title: "Pre-Sales Build-Out",
     description:
-      "Build your pre-sales function from zero — team, processes, materials, templates, training.",
+      "Build your pre-sales function from zero - team, processes, materials, templates, training.",
     href: "/services/pre-sales-build-out",
   },
   {
     icon: "🔍",
     title: "Technical Due Diligence",
     description:
-      "Evaluate technology companies for investors — architecture, team, scalability, risk.",
+      "Evaluate technology companies for investors - architecture, team, scalability, risk.",
     href: "/services/technical-due-diligence",
   },
   {
     icon: "🚀",
     title: "CTO-as-a-Service",
     description:
-      "Part-time CTO for startups — technical strategy, architecture decisions, team building.",
+      "Part-time CTO for startups - technical strategy, architecture decisions, team building.",
     href: "/services/cto-as-a-service",
   },
   {
@@ -191,13 +191,13 @@ const STEPS = [
     number: "02",
     title: "90-Day Embed",
     description:
-      "I join your team. Attend calls. Support deals. Build process. Shared risk — retainer + success fee.",
+      "I join your team. Attend calls. Support deals. Build process. Shared risk - retainer + success fee.",
   },
   {
     number: "03",
     title: "Measure & Decide",
     description:
-      "Win rate, pipeline growth, deal velocity. Data, not promises. Continue, expand, or part ways — 30 days' notice.",
+      "Win rate, pipeline growth, deal velocity. Data, not promises. Continue, expand, or part ways - 30 days' notice.",
   },
 ];
 
@@ -215,12 +215,12 @@ const FAQS = [
   {
     question: "How much does it cost?",
     answer:
-      "Engagements start at $3,000/month on a retainer + success fee model. If the deal doesn't close, I lose too. This isn't consulting — it's a partnership. Typical engagements run 3-6 months minimum.",
+      "Engagements start at $3,000/month on a retainer + success fee model. If the deal doesn't close, I lose too. This isn't consulting - it's a partnership. Typical engagements run 3-6 months minimum.",
   },
   {
     question: "What's the first step?",
     answer:
-      "Book a 30-minute discovery call. No pitch, no pressure. I'll listen to your situation and tell you honestly whether I can help — and if I'm not the right fit, I'll say so.",
+      "Book a 30-minute discovery call. No pitch, no pressure. I'll listen to your situation and tell you honestly whether I can help - and if I'm not the right fit, I'll say so.",
   },
 ];
 
@@ -386,10 +386,11 @@ function Problem() {
               Does this sound like your pre-sales?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              After 28 years on both sides of the table — buying from vendors as a CIO, then selling to customers
-              as a CTO — I&apos;ve seen the same patterns destroy deals again and again. Pre-sales is where trust is
-              built or broken. Most teams don&apos;t fail because of the product. They fail because they show up
-              unprepared, sell from the vendor side, and never shift from presenting features to building trust.
+              After 28 years on both sides of the table - first buying from vendors as a CIO, then selling to
+              customers as a Pre-Sales Manager and later as a CTO - I&apos;ve seen the same patterns destroy deals
+              again and again. Pre-sales is where trust is built or broken. In many cases, teams don&apos;t fail
+              because of the product. They fail because they show up unprepared, sell from the vendor side, and
+              in many cases, never quite shift from presenting features to building trust.
             </p>
           </div>
         </FadeIn>
@@ -423,7 +424,7 @@ function WhatIsSalesCTO() {
               What is a Sales CTO?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              A new category of technical leadership — built for revenue, not
+              A new category of technical leadership - built for revenue, not
               just architecture.
             </p>
           </div>
@@ -594,7 +595,7 @@ function WhyMe() {
               I&apos;m not an engineer who became a manager. I&apos;m a
               commercial leader who happens to have deep technical credibility.
               Pre-sales, sales, and account management bring me genuine pleasure
-              — and that passion is what makes me effective in your deals.
+              - and that passion is what makes me effective in your deals.
             </p>
             <div className="flex flex-wrap gap-2">
               {[
