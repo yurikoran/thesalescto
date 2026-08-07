@@ -289,74 +289,165 @@ function Navbar() {
   );
 }
 
+const HERO_PROOF = [
+  { metric: "5x", detail: "Services revenue growth in 1 year" },
+  { metric: "28", detail: "Years on both sides of the table" },
+  { metric: "10+", detail: "Countries with enterprise clients" },
+];
+
+const HERO_ROLES = [
+  { role: "CIO", side: "buyer", years: "14 yrs" },
+  { role: "Pre-Sales Manager", side: "vendor", years: "" },
+  { role: "Solution Architect", side: "vendor", years: "" },
+  { role: "CTO", side: "vendor", years: "14 yrs" },
+];
+
 function Hero() {
   return (
-    <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+    <section className="relative pt-28 pb-8 px-6 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute top-40 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/4 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/4 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-4xl mx-auto text-center">
-        <FadeIn>
-          <p className="text-sm font-semibold text-accent uppercase tracking-[0.2em] mb-6">
-            Fractional Field CTO &amp; Pre-Sales Consulting
-          </p>
-        </FadeIn>
+      <div className="max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-        <FadeIn delay={0.1}>
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary leading-[1.1] tracking-tight mb-6">
-            Your Embedded
-            <br />
-            <span className="gradient-text">Sales CTO</span>
-          </h1>
-        </FadeIn>
+          {/* Left column — headline & CTAs */}
+          <div>
+            <FadeIn>
+              <p className="text-sm font-semibold text-accent uppercase tracking-[0.2em] mb-6">
+                Fractional Field CTO &amp; Pre-Sales Consulting
+              </p>
+            </FadeIn>
 
-        <FadeIn delay={0.2}>
-          <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
-            Not a consultant who advises and leaves. Not a vendor who delivers
-            and disappears. A partner who shares the risk, owns the result, and
-            stays until the deal closes.
-          </p>
-        </FadeIn>
+            <FadeIn delay={0.1}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-6 text-balance">
+                Your Embedded
+                <br />
+                <span className="gradient-text">Sales CTO</span>
+              </h1>
+            </FadeIn>
 
-        <FadeIn delay={0.3}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a
-              href="https://calendly.com/thesalescto/discovery-call"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent rounded-full hover:bg-accent-dark transition-all shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
-            >
-              Book a Discovery Call
-            </a>
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary border-2 border-border rounded-full hover:border-accent hover:text-accent transition-all hover:-translate-y-0.5"
-            >
-              See How It Works
-            </a>
-          </div>
-        </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-lg text-muted mb-8 leading-relaxed max-w-lg">
+                Not a consultant who advises and leaves. Not a vendor who delivers
+                and disappears. A partner who shares the risk, owns the result, and
+                stays until the deal closes.
+              </p>
+            </FadeIn>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto">
-          {STATS.map((stat, i) => (
-            <FadeIn key={stat.label} delay={0.4 + i * 0.1}>
-              <div className="text-center">
-                <p className="text-3xl sm:text-4xl font-bold text-primary">
-                  {isNaN(Number(stat.value)) ? (
-                    <span>{stat.value}{stat.suffix}</span>
-                  ) : (
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                  )}
-                </p>
-                <p className="text-xs sm:text-sm text-muted mt-2">
-                  {stat.label}
-                </p>
+            <FadeIn delay={0.3}>
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <a
+                  href="https://calendly.com/thesalescto/discovery-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent rounded-full hover:bg-accent-dark transition-all shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
+                >
+                  Book a Discovery Call
+                </a>
+                <a
+                  href="#services"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary border-2 border-border rounded-full hover:border-accent hover:text-accent transition-all hover:-translate-y-0.5"
+                >
+                  See How It Works
+                </a>
               </div>
             </FadeIn>
-          ))}
+
+            {/* Proof strip */}
+            <FadeIn delay={0.4}>
+              <div className="flex items-center gap-6 pt-2">
+                {HERO_PROOF.map((item, i) => (
+                  <div key={item.metric} className="flex items-center gap-5">
+                    <div>
+                      <span className="text-2xl font-bold text-primary block leading-none">{item.metric}</span>
+                      <span className="text-xs text-muted mt-0.5 block leading-tight max-w-[7rem]">{item.detail}</span>
+                    </div>
+                    {i < HERO_PROOF.length - 1 && (
+                      <div className="h-8 w-px bg-border shrink-0" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
+
+          {/* Right column — credibility card */}
+          <FadeIn delay={0.2} direction="left">
+            <div className="relative">
+              <div className="bg-primary rounded-3xl p-8 text-white shadow-2xl shadow-primary/20">
+
+                {/* Card header */}
+                <div className="flex items-start justify-between mb-8">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">
+                      Career span
+                    </p>
+                    <p className="text-4xl font-bold">28 yrs</p>
+                    <p className="text-white/60 text-sm mt-1">Both sides of the table</p>
+                  </div>
+                  <div className="bg-accent/15 rounded-2xl px-4 py-3 text-right">
+                    <p className="text-xs text-white/50 mb-1">Clients served in</p>
+                    <p className="text-2xl font-bold text-accent">10+</p>
+                    <p className="text-white/60 text-xs">countries</p>
+                  </div>
+                </div>
+
+                {/* Career timeline */}
+                <div className="space-y-3 mb-8">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-3">
+                    Career path
+                  </p>
+                  {HERO_ROLES.map((r) => (
+                    <div key={r.role} className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <span className={`w-2 h-2 rounded-full shrink-0 ${r.side === "buyer" ? "bg-purple-400" : "bg-accent"}`} />
+                        <span className="text-sm font-medium text-white/90">{r.role}</span>
+                      </div>
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${r.side === "buyer" ? "bg-purple-400/15 text-purple-300" : "bg-accent/15 text-accent"}`}>
+                        {r.side === "buyer" ? "buyer side" : "vendor side"}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Trust badges */}
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {[
+                    { label: "100+", sub: "person IT team led" },
+                    { label: "20+", sub: "enterprise projects" },
+                    { label: "1PB+", sub: "data volume managed" },
+                    { label: "50/50", sub: "buyer & vendor split" },
+                  ].map((b) => (
+                    <div key={b.label} className="bg-white/5 rounded-xl px-3 py-2.5">
+                      <p className="text-sm font-bold text-white">{b.label}</p>
+                      <p className="text-xs text-white/50 leading-tight">{b.sub}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-white/10 mb-4" />
+
+                {/* Social proof quote */}
+                <blockquote className="text-white/75 text-sm leading-relaxed italic">
+                  &ldquo;I&apos;ve sat in the room as the CIO signing the contract — and as the CTO closing the deal.
+                  That&apos;s the only reason this works.&rdquo;
+                </blockquote>
+                <p className="text-white/40 text-xs mt-3 font-medium">— The Sales CTO Founder</p>
+              </div>
+
+              {/* Floating badge */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-border">
+                <p className="text-xs text-muted font-medium">Pre-sales built</p>
+                <p className="text-xl font-bold text-primary">from scratch</p>
+              </div>
+            </div>
+          </FadeIn>
+
         </div>
       </div>
     </section>
