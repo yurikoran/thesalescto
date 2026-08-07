@@ -546,8 +546,8 @@ function Services() {
 
         {/* Hero service - the main offer */}
         <FadeIn>
-          <div className="relative overflow-hidden bg-primary rounded-3xl p-8 sm:p-12 text-white mb-12 shadow-lg">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-50" />
+          <div className="relative overflow-hidden bg-dark-section rounded-3xl p-8 sm:p-12 text-white mb-12 shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-br from-dark-section via-dark-section-light to-dark-section opacity-50" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-full blur-3xl" />
             <div className="relative">
               <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
@@ -566,7 +566,7 @@ function Services() {
                 href="https://calendly.com/thesalescto/discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary bg-white rounded-full hover:bg-white/90 transition-all shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-dark-section bg-white rounded-full hover:bg-white/90 transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Book a Discovery Call
               </a>
@@ -722,8 +722,8 @@ function FAQandCTA() {
 
         {/* Final CTA */}
         <FadeIn>
-          <div className="relative text-center bg-primary rounded-2xl p-10 sm:p-16 text-white overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-50" />
+          <div className="relative text-center bg-dark-section rounded-2xl p-10 sm:p-16 text-white overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-dark-section via-dark-section-light to-dark-section opacity-50" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
             <div className="relative">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -738,7 +738,7 @@ function FAQandCTA() {
                   href="https://calendly.com/thesalescto/discovery-call"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary bg-white rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-dark-section bg-white rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
                   Book a Discovery Call
                 </a>

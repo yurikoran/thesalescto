@@ -12,6 +12,8 @@
   --muted: #64748b;
   --border: #e2e8f0;
   --surface: #f8fafc;
+  --dark-section: #0f172a;
+  --dark-section-light: #1e293b;
   --background: #ffffff;
   --foreground: #1a1a2e;
   --card: #ffffff;
@@ -52,6 +54,8 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-surface: var(--surface);
+  --color-dark-section: var(--dark-section);
+  --color-dark-section-light: var(--dark-section-light);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
