@@ -353,18 +353,18 @@ function Hero() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8 max-w-3xl mx-auto border-t border-border pt-10">
           {STATS.map((stat, i) => (
             <FadeIn key={stat.label} delay={0.4 + i * 0.1}>
-              <div className="text-center">
-                <p className="text-3xl sm:text-4xl font-bold text-primary">
+              <div className="text-center px-2">
+                <p className="text-2xl sm:text-3xl font-bold text-primary leading-none">
                   {isNaN(Number(stat.value)) ? (
-                    <span>{stat.value}{stat.suffix}</span>
+                    <span className="whitespace-nowrap">{stat.value}{stat.suffix}</span>
                   ) : (
                     <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                   )}
                 </p>
-                <p className="text-xs sm:text-sm text-muted mt-2">
+                <p className="text-xs text-muted mt-2 leading-snug">
                   {stat.label}
                 </p>
               </div>
