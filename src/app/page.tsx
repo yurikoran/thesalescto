@@ -553,7 +553,7 @@ function Services() {
               <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
                 <HERO_SERVICE.icon className="w-6 h-6 text-white" strokeWidth={1.75} />
               </div>
-              <p className="inline-block text-xs font-semibold tracking-widest uppercase bg-accent/20 text-accent-foreground px-3 py-1 rounded-full mb-4">
+              <p className="inline-block text-xs font-semibold tracking-widest uppercase bg-accent/25 text-white px-3 py-1 rounded-full mb-4">
                 Main offer
               </p>
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">
