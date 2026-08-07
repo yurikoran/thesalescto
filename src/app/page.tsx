@@ -2,6 +2,19 @@
 
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
+import {
+  ClipboardX,
+  ArrowLeftRight,
+  TrendingDown,
+  Users,
+  Briefcase,
+  Building2,
+  Rocket,
+  Cloud,
+  Check,
+  X,
+  AlertTriangle,
+} from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 // ============================================================
@@ -101,58 +114,58 @@ const STATS = [
   { value: "3", suffix: "x", label: "Field/Sales CTO demand since 2021" },
 ];
 
-const PROBLEMS = [
+const PROBLEMS: { icon: React.ElementType; title: string; description: string }[] = [
   {
-    icon: "📋",
+    icon: ClipboardX,
     title: "Your pre-sales shows up with no slides, no homework, no plan",
     description:
       "In 28 years on both sides - half buying, half selling - I've watched the same scene again and again. The pre-sales engineer opens a blank screen or a product overview deck. No research on the customer's industry. No understanding of their architecture. No presentation tailored to their problems. No plan for how the solution will be delivered. The customer asks about their project pain, their compliance, their legacy integration - and gets a feature walkthrough. The customer hears about the vendor and the solution - and nothing about their own pain, or how others in the market face the same challenge.",
   },
   {
-    icon: "🔄",
+    icon: ArrowLeftRight,
     title: "Your pre-sales sells from the vendor's point of view, not the customer's",
     description:
       "The default pre-sales mindset is: 'Here's what we built. Here's how it works. Buy it.' But an enterprise CTO or VP Engineering doesn't need to know how your product works. They need to know: does this solve my problem? Does it reduce my risk? Can my team maintain it after you leave? What if our requirements change in 6 months? Without someone who has actually been the buyer - who evaluated vendors, knew how the buying process works, wrote RFPs, and made purchase decisions - the conversation stays on the vendor's terms. The customer stays skeptical. The deal stalls.",
   },
   {
-    icon: "💸",
+    icon: TrendingDown,
     title: "You invest 10x more in sales than in pre-sales - and lose because of it",
     description:
       "Most B2B tech companies spend $500K+ on sales headcount and $50K+ on pre-sales. But think about where a complex enterprise deal is actually won or lost: in the technical discovery. In the architecture review. In the security assessment. In the moment when the buyer's CTO asks a hard question and your person in the room either answers with credibility - or doesn't. The budget is inverted: you're paying for pipeline, not for trust. And in enterprise B2B, trust is what closes.",
   },
   {
-    icon: "🤝",
+    icon: Users,
     title: "Nobody in the room is building trust - they're just presenting features",
     description:
       "Your team can demo. They can explain functionality. But can they sit with a buyer's CTO and say honestly: 'I understand your migration concerns. I led a 100+ person IT team for years. I've managed 20+ projects with 1PB+ data volumes. Here's what we did in a similar situation. Here's what we'd recommend for you - and here's what we wouldn't do, and why.' That's not a sales conversation. That's a peer conversation. One that earns trust. One that changes how the buyer sees you - from vendor to advisor. And it's the moment when deals stop stalling and start closing.",
   },
 ];
 
-const HERO_SERVICE = {
-  icon: "👔",
+const HERO_SERVICE: { icon: React.ElementType; title: string; description: string; href: string } = {
+  icon: Briefcase,
   title: "The Embedded Sales CTO",
   description:
     "I join your team for 90 days or more. I sit in your calls, your deals, your architecture reviews. I help your sales team turn technical credibility into closed revenue - and I stay until the deal closes, not until the deck is done.",
   href: "/services/fractional-sales-cto",
 };
 
-const ADJACENT_SERVICES = [
+const ADJACENT_SERVICES: { icon: React.ElementType; title: string; description: string; href: string }[] = [
   {
-    icon: "🏗️",
+    icon: Building2,
     title: "Pre-Sales Build-Out",
     description:
       "Build your pre-sales function from zero: team, process, materials, training.",
     href: "/services/pre-sales-build-out",
   },
   {
-    icon: "🚀",
+    icon: Rocket,
     title: "CTO-as-a-Service",
     description:
       "Part-time CTO for early-stage startups: technical strategy, architecture, team-building.",
     href: "/services/cto-as-a-service",
   },
   {
-    icon: "☁️",
+    icon: Cloud,
     title: "Migration Advisory",
     description:
       "Database migration and application modernization advisory.",
@@ -385,7 +398,9 @@ function Problem() {
           {PROBLEMS.map((problem, i) => (
             <FadeIn key={problem.title} delay={i * 0.1}>
               <div className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/20 transition-all duration-300 group">
-                <span className="text-3xl mb-4 block">{problem.icon}</span>
+                <div className="w-10 h-10 rounded-xl bg-accent/8 flex items-center justify-center mb-5">
+                  <problem.icon className="w-5 h-5 text-accent" strokeWidth={1.75} />
+                </div>
                 <h3 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                   {problem.title}
                 </h3>
@@ -459,21 +474,17 @@ function WhatIsSalesCTO() {
                 <tbody className="text-foreground">
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4 font-medium">Technical</td>
-                    <td className="text-center py-3 px-3">✅</td>
-                    <td className="text-center py-3 px-3">❌</td>
-                    <td className="text-center py-3 px-3">⚠️</td>
-                    <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5">
-                      ✅
-                    </td>
+                    <td className="py-3 px-3"><span className="flex justify-center"><Check className="w-4 h-4 text-emerald-500" strokeWidth={2.5} /></span></td>
+                    <td className="py-3 px-3"><span className="flex justify-center"><X className="w-4 h-4 text-red-400" strokeWidth={2.5} /></span></td>
+                    <td className="py-3 px-3"><span className="flex justify-center"><AlertTriangle className="w-4 h-4 text-amber-400" strokeWidth={2} /></span></td>
+                    <td className="py-3 px-3 bg-accent/5"><span className="flex justify-center"><Check className="w-4 h-4 text-accent" strokeWidth={2.5} /></span></td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4 font-medium">Commercial</td>
-                    <td className="text-center py-3 px-3">❌</td>
-                    <td className="text-center py-3 px-3">✅</td>
-                    <td className="text-center py-3 px-3">✅</td>
-                    <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5">
-                      ✅
-                    </td>
+                    <td className="py-3 px-3"><span className="flex justify-center"><X className="w-4 h-4 text-red-400" strokeWidth={2.5} /></span></td>
+                    <td className="py-3 px-3"><span className="flex justify-center"><Check className="w-4 h-4 text-emerald-500" strokeWidth={2.5} /></span></td>
+                    <td className="py-3 px-3"><span className="flex justify-center"><Check className="w-4 h-4 text-emerald-500" strokeWidth={2.5} /></span></td>
+                    <td className="py-3 px-3 bg-accent/5"><span className="flex justify-center"><Check className="w-4 h-4 text-accent" strokeWidth={2.5} /></span></td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4 font-medium">Cost / Year</td>
@@ -539,7 +550,9 @@ function Services() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-50" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-full blur-3xl" />
             <div className="relative">
-              <span className="text-4xl mb-4 block">{HERO_SERVICE.icon}</span>
+              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
+                <HERO_SERVICE.icon className="w-6 h-6 text-white" strokeWidth={1.75} />
+              </div>
               <p className="inline-block text-xs font-semibold tracking-widest uppercase bg-accent/20 text-accent-foreground px-3 py-1 rounded-full mb-4">
                 Main offer
               </p>
@@ -571,7 +584,9 @@ function Services() {
           {ADJACENT_SERVICES.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
               <div className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/30 transition-all duration-300 group h-full">
-                <span className="text-3xl mb-4 block">{service.icon}</span>
+                <div className="w-10 h-10 rounded-xl bg-accent/8 flex items-center justify-center mb-5 group-hover:bg-accent/12 transition-colors">
+                  <service.icon className="w-5 h-5 text-accent" strokeWidth={1.75} />
+                </div>
                 <h4 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                   {service.title}
                 </h4>
