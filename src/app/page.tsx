@@ -446,7 +446,11 @@ function WhatIsSalesCTO() {
         <FadeIn delay={0.1}>
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 mb-14">
             <div className="rounded-3xl bg-dark-section px-6 py-7 sm:px-8 sm:py-8 text-white shadow-xl">
-              <p className="text-xl sm:text-2xl font-semibold leading-snug lg:whitespace-nowrap mb-7">Your CTO builds the product. Your VP Sales sells it. Nobody owns the gap between them.</p>
+              <p className="text-xl sm:text-2xl font-semibold leading-snug mb-7">
+                Your CTO builds the product.<br />
+                Your VP Sales sells it.<br />
+                Nobody owns the gap between them.
+              </p>
               <div className="flex items-center gap-3 text-sm text-white/60 border-t border-white/15 pt-5">
                 <span className="size-2 rounded-full bg-accent" />
                 <span>The room where technical buyers make the decision</span>
