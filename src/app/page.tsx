@@ -421,7 +421,7 @@ function WhatIsSalesCTO() {
     { name: "Fractional CTO", note: "Builds the product", technical: "yes", commercial: "no", cost: "$90–250K", start: "1–2 weeks", risk: "Low" },
     { name: "Sales Consultant", note: "Teaches the method", technical: "no", commercial: "yes", cost: "$50–150K", start: "2–4 weeks", risk: "Low" },
     { name: "VP of Sales", note: "Owns the number", technical: "partial", commercial: "yes", cost: "$250–450K", start: "6–9 months", risk: "High" },
-    { name: "The Sales CTO", note: "Owns the gap", technical: "yes", commercial: "yes", cost: "$60–120K", start: "1–2 weeks", risk: "Low", featured: true },
+    { name: "The Sales CTO", note: "Owns the gap", technical: "yes", commercial: "yes", cost: "$60–90K + bonus", start: "1–2 weeks", risk: "Low", featured: true },
   ];
 
   const status = (value: string) => {
@@ -439,14 +439,14 @@ function WhatIsSalesCTO() {
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-5">The missing role in your revenue team</p>
               <h2 className="text-3xl sm:text-5xl font-bold text-primary leading-tight text-balance">What is a Sales CTO?</h2>
             </div>
-            <p className="text-lg text-muted leading-relaxed lg:pb-1">An established role, now available on demand — built for the moment when a technical buyer decides whether to trust you.</p>
+
           </div>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 mb-14">
-            <div className="rounded-3xl bg-dark-section p-8 sm:p-10 text-white shadow-xl">
-              <p className="text-2xl sm:text-3xl font-semibold leading-tight text-balance mb-8">Your CTO builds the product. Your VP Sales sells it. Nobody owns the gap between them.</p>
+            <div className="rounded-3xl bg-dark-section px-6 py-7 sm:px-8 sm:py-8 text-white shadow-xl">
+              <p className="text-xl sm:text-2xl font-semibold leading-snug lg:whitespace-nowrap mb-7">Your CTO builds the product. Your VP Sales sells it. Nobody owns the gap between them.</p>
               <div className="flex items-center gap-3 text-sm text-white/60 border-t border-white/15 pt-5">
                 <span className="size-2 rounded-full bg-accent" />
                 <span>The room where technical buyers make the decision</span>
