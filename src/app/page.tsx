@@ -14,8 +14,6 @@ import {
   Check,
   X,
   AlertTriangle,
-  Menu,
-  X as   CloseIcon,
 } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
@@ -258,7 +256,6 @@ function FAQSchema() {
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -273,53 +270,34 @@ function Navbar() {
       transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-card/70 backdrop-blur-xl shadow-sm border-b border-white/20"
+          ? "bg-white/70 backdrop-blur-xl shadow-sm border-b border-white/20"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-foreground tracking-tight">
+        <Link href="/" className="text-xl font-bold text-primary tracking-tight">
           The Sales CTO
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
-          <a href="#services" className="hover:text-foreground transition-colors">
+          <a href="#services" className="hover:text-primary transition-colors">
             Services
           </a>
-          <a href="#about" className="hover:text-foreground transition-colors">
+          <a href="#about" className="hover:text-primary transition-colors">
             About
           </a>
-          <a href="#faq" className="hover:text-foreground transition-colors">
+          <a href="#faq" className="hover:text-primary transition-colors">
             FAQ
           </a>
           <a
             href="https://calendly.com/thesalescto/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-dark-section text-white px-5 py-2.5 rounded-full hover:bg-dark-section-light transition-colors"
+            className="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-primary-light transition-colors"
           >
             Book a Call
           </a>
         </div>
-        <button
-          type="button"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((open) => !open)}
-          className="md:hidden inline-flex size-10 items-center justify-center rounded-full border border-border text-foreground"
-        >
-          {menuOpen ? <CloseIcon className="size-5" /> : <Menu className="size-5" />}
-        </button>
       </div>
-      {menuOpen && (
-        <div className="md:hidden border-t border-border bg-card/95 px-6 py-5 backdrop-blur-xl">
-          <div className="flex flex-col gap-4 text-sm font-medium text-muted">
-            {[['#services', 'Services'], ['#about', 'About'], ['#faq', 'FAQ']].map(([href, label]) => (
-              <a key={href} href={href} onClick={() => setMenuOpen(false)} className="py-2 text-foreground">{label}</a>
-            ))}
-            <a href="https://calendly.com/thesalescto/discovery-call" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 font-semibold text-accent-foreground">Book a Call</a>
-          </div>
-        </div>
-      )}
     </motion.nav>
   );
 }
@@ -333,19 +311,20 @@ function Hero() {
         <div className="absolute top-40 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="max-w-4xl">
-          <FadeIn>
-            <p className="mb-6 max-w-2xl text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
-              Fractional Field CTO &amp; Pre-Sales Consulting
-            </p>
-          </FadeIn>
+      <div className="max-w-4xl mx-auto text-center">
+        <FadeIn>
+          <p className="text-sm font-semibold text-accent uppercase tracking-[0.2em] mb-6">
+            Fractional Field CTO &amp; Pre-Sales Consulting
+          </p>
+        </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <h1 className="text-2xl font-semibold text-muted leading-tight tracking-tight mb-6 sm:text-3xl">
-              Your Embedded <span className="gradient-text">Sales CTO</span>
-            </h1>
-          </FadeIn>
+        <FadeIn delay={0.1}>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary leading-[1.1] tracking-tight mb-6">
+            Your Embedded
+            <br />
+            <span className="gradient-text">Sales CTO</span>
+          </h1>
+        </FadeIn>
 
         <FadeIn delay={0.2}>
           <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -367,7 +346,7 @@ function Hero() {
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-foreground border-2 border-border rounded-full hover:border-accent hover:text-accent transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary border-2 border-border rounded-full hover:border-accent hover:text-accent transition-all hover:-translate-y-0.5"
             >
               See How It Works
             </a>
@@ -378,7 +357,7 @@ function Hero() {
           {STATS.map((stat, i) => (
             <FadeIn key={stat.label} delay={0.4 + i * 0.1}>
               <div className="text-center px-2">
-                <p className="text-2xl sm:text-3xl font-bold text-foreground leading-none">
+                <p className="text-2xl sm:text-3xl font-bold text-primary leading-none">
                   {isNaN(Number(stat.value)) ? (
                     <span className="whitespace-nowrap">{stat.value}{stat.suffix}</span>
                   ) : (
@@ -392,7 +371,6 @@ function Hero() {
             </FadeIn>
           ))}
         </div>
-        </div>
       </div>
     </section>
   );
@@ -404,7 +382,7 @@ function Problem() {
       <div className="max-w-6xl mx-auto">
         <FadeIn>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               Does this sound like your pre-sales?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
@@ -419,11 +397,11 @@ function Problem() {
         <div className="grid md:grid-cols-2 gap-6">
           {PROBLEMS.map((problem, i) => (
             <FadeIn key={problem.title} delay={i * 0.1}>
-              <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/20 transition-all duration-300 group">
+              <div className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/20 transition-all duration-300 group">
                 <div className="w-10 h-10 rounded-xl bg-accent/8 flex items-center justify-center mb-5">
                   <problem.icon className="w-5 h-5 text-accent" strokeWidth={1.75} />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+                <h3 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                   {problem.title}
                 </h3>
                 <p className="text-muted leading-relaxed">
@@ -444,7 +422,7 @@ function WhatIsSalesCTO() {
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               What is a Sales CTO?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
@@ -556,7 +534,7 @@ function Services() {
       <div className="max-w-6xl mx-auto">
         <FadeIn>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               How I Help
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
@@ -572,7 +550,7 @@ function Services() {
             <div className="absolute inset-0 bg-gradient-to-br from-dark-section via-dark-section-light to-dark-section opacity-50" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-full blur-3xl" />
             <div className="relative">
-              <div className="w-12 h-12 rounded-2xl bg-card/10 flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
                 <HERO_SERVICE.icon className="w-6 h-6 text-white" strokeWidth={1.75} />
               </div>
               <p className="inline-block text-xs font-semibold tracking-widest uppercase bg-accent/25 text-white px-3 py-1 rounded-full mb-4">
@@ -588,7 +566,7 @@ function Services() {
                 href="https://calendly.com/thesalescto/discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-dark-section bg-card rounded-full hover:bg-card/90 transition-all shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-dark-section bg-white rounded-full hover:bg-white/90 transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Book a Discovery Call
               </a>
@@ -598,18 +576,18 @@ function Services() {
 
         {/* Adjacent services */}
         <FadeIn>
-          <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
+          <h3 className="text-xl font-semibold text-primary mb-6 text-center">
             Also available, if your situation calls for it:
           </h3>
         </FadeIn>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ADJACENT_SERVICES.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
-              <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/30 transition-all duration-300 group h-full">
+              <div className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/30 transition-all duration-300 group h-full">
                 <div className="w-10 h-10 rounded-xl bg-accent/8 flex items-center justify-center mb-5 group-hover:bg-accent/12 transition-colors">
                   <service.icon className="w-5 h-5 text-accent" strokeWidth={1.75} />
                 </div>
-                <h4 className="text-lg font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+                <h4 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                   {service.title}
                 </h4>
                 <p className="text-muted text-sm leading-relaxed mb-4">
@@ -633,7 +611,7 @@ function WhyMe() {
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               Why Me?
             </h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
@@ -657,7 +635,7 @@ function WhyMe() {
         </div>
         <FadeIn delay={0.3}>
           <div className="bg-surface rounded-2xl p-8 sm:p-12 border border-border">
-            <h3 className="text-xl font-bold text-foreground mb-4">The Founder</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">The Founder</h3>
             <p className="text-muted leading-relaxed mb-4">
               My career is split evenly between the two sides of the table. First
               I led a 100+ person IT division - the customer who evaluates
@@ -686,7 +664,7 @@ function HowItWorks() {
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               How It Works
             </h2>
             <p className="text-lg text-muted">
@@ -697,12 +675,12 @@ function HowItWorks() {
         <div className="space-y-6">
           {STEPS.map((step, i) => (
             <FadeIn key={step.number} delay={i * 0.15} direction="left">
-              <div className="flex gap-6 items-start bg-card rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/20 transition-all duration-300 group">
+              <div className="flex gap-6 items-start bg-white rounded-2xl p-8 border border-border hover:shadow-lg hover:border-accent/20 transition-all duration-300 group">
                 <span className="text-5xl font-bold text-accent/10 shrink-0 group-hover:text-accent/20 transition-colors">
                   {step.number}
                 </span>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                  <h3 className="text-xl font-semibold text-primary mb-2">
                     {step.title}
                   </h3>
                   <p className="text-muted leading-relaxed">
@@ -724,7 +702,7 @@ function FAQandCTA() {
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               Frequently Asked Questions
             </h2>
           </div>
@@ -732,13 +710,12 @@ function FAQandCTA() {
         <div className="space-y-6 mb-20">
           {FAQS.map((faq, i) => (
             <FadeIn key={faq.question} delay={i * 0.1}>
-              <details open={i === 0} className="group rounded-2xl border border-border bg-card px-6 py-5 transition-colors hover:border-accent/50">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-foreground [&::-webkit-details-marker]:hidden">
+              <div className="bg-surface rounded-2xl p-6 sm:p-8 border border-border hover:border-accent/20 transition-colors">
+                <h3 className="text-lg font-semibold text-primary mb-3">
                   {faq.question}
-                  <span className="text-accent transition-transform group-open:rotate-45">+</span>
-                </summary>
-                <p className="mt-4 max-w-3xl text-muted leading-relaxed">{faq.answer}</p>
-              </details>
+                </h3>
+                <p className="text-muted leading-relaxed">{faq.answer}</p>
+              </div>
             </FadeIn>
           ))}
         </div>
@@ -761,13 +738,13 @@ function FAQandCTA() {
                   href="https://calendly.com/thesalescto/discovery-call"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-dark-section bg-card rounded-full hover:bg-card/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-dark-section bg-white rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
                   Book a Discovery Call
                 </a>
                 <a
                   href="mailto:info@thesalescto.com"
-                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 rounded-full hover:border-white hover:bg-card/10 transition-all"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 rounded-full hover:border-white hover:bg-white/10 transition-all"
                 >
                   Email Me
                 </a>
@@ -785,7 +762,7 @@ function Footer() {
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <p className="text-lg font-bold text-foreground">The Sales CTO</p>
+          <p className="text-lg font-bold text-primary">The Sales CTO</p>
           <p className="text-sm text-muted mt-1">
             © {new Date().getFullYear()} The Sales CTO. All rights reserved.
           </p>
