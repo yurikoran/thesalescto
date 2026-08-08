@@ -418,10 +418,10 @@ function Problem() {
 
 function WhatIsSalesCTO() {
   const roles = [
+    { name: "The Sales CTO", note: "Owns the gap", technical: "yes", commercial: "yes", cost: "$60–90K + bonus on closed deals", start: "1–2 weeks", risk: "Low", featured: true },
     { name: "Fractional CTO", note: "Builds the product", technical: "yes", commercial: "no", cost: "$90–250K", start: "1–2 weeks", risk: "Low" },
     { name: "Sales Consultant", note: "Teaches the method", technical: "no", commercial: "yes", cost: "$50–150K", start: "2–4 weeks", risk: "Low" },
     { name: "VP of Sales", note: "Owns the number", technical: "partial", commercial: "yes", cost: "$250–450K", start: "6–9 months", risk: "High" },
-    { name: "The Sales CTO", note: "Owns the gap", technical: "yes", commercial: "yes", cost: "$60–90K + bonus", start: "1–2 weeks", risk: "Low", featured: true },
   ];
 
   const status = (value: string) => {
@@ -451,10 +451,6 @@ function WhatIsSalesCTO() {
                 Your VP Sales sells it.<br />
                 Nobody owns the gap between them.
               </p>
-              <div className="flex items-center gap-3 text-sm text-white/60 border-t border-white/15 pt-5">
-                <span className="size-2 rounded-full bg-accent" />
-                <span>The room where technical buyers make the decision</span>
-              </div>
             </div>
             <div className="rounded-3xl border border-border bg-surface p-8 sm:p-10">
               <p className="text-lg text-foreground leading-relaxed mb-5">That gap needs its own role. In enterprise software, it&apos;s already a growing function — the <strong>Field CTO</strong>, a senior technical leader who translates complex capabilities into business value.</p>
