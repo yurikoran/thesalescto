@@ -5,43 +5,43 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary: #1a1a2e;
-  --primary-light: #2d2d4e;
-  --accent: #3b82f6;
-  --accent-dark: #2563eb;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --surface: #f8fafc;
-  --dark-section: #0f172a;
-  --dark-section-light: #1e293b;
-  --background: #ffffff;
-  --foreground: #1a1a2e;
-  --card: #ffffff;
-  --card-foreground: #1a1a2e;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a2e;
-  --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #1a1a2e;
-  --muted-foreground: #64748b;
-  --accent-foreground: #1a1a2e;
-  --destructive: #ef4444;
-  --input: #e2e8f0;
-  --ring: #3b82f6;
-  --chart-1: #3b82f6;
-  --chart-2: #10b981;
-  --chart-3: #f59e0b;
-  --chart-4: #ef4444;
-  --chart-5: #8b5cf6;
+  --primary: #f8fafc;
+  --primary-light: #e2e8f0;
+  --accent: #7dd3fc;
+  --accent-dark: #38bdf8;
+  --muted: #94a3b8;
+  --border: #263244;
+  --surface: #111827;
+  --dark-section: #0b0f19;
+  --dark-section-light: #172033;
+  --background: #0b0f19;
+  --foreground: #f8fafc;
+  --card: #111827;
+  --card-foreground: #f8fafc;
+  --popover: #111827;
+  --popover-foreground: #f8fafc;
+  --primary-foreground: #0b0f19;
+  --secondary: #172033;
+  --secondary-foreground: #f8fafc;
+  --muted-foreground: #94a3b8;
+  --accent-foreground: #0b0f19;
+  --destructive: #fb7185;
+  --input: #263244;
+  --ring: #7dd3fc;
+  --chart-1: #7dd3fc;
+  --chart-2: #5eead4;
+  --chart-3: #fbbf24;
+  --chart-4: #fb7185;
+  --chart-5: #c4b5fd;
   --radius: 0.75rem;
-  --sidebar: #f8fafc;
-  --sidebar-foreground: #1a1a2e;
-  --sidebar-primary: #1a1a2e;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f1f5f9;
-  --sidebar-accent-foreground: #1a1a2e;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #3b82f6;
+  --sidebar: #111827;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #7dd3fc;
+  --sidebar-primary-foreground: #0b0f19;
+  --sidebar-accent: #172033;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #263244;
+  --sidebar-ring: #7dd3fc;
 }
 
 @theme inline {
@@ -106,8 +106,8 @@ body {
 
 /* Selection */
 ::selection {
-  background: #3b82f6;
-  color: white;
+  background: #7dd3fc;
+  color: #0b0f19;
 }
 
 /* Custom scrollbar */
@@ -118,16 +118,16 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #334155;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #64748b;
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #7dd3fc 0%, #c4b5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
