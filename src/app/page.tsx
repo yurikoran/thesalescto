@@ -417,110 +417,67 @@ function Problem() {
 }
 
 function WhatIsSalesCTO() {
+  const roles = [
+    { name: "Fractional CTO", note: "Builds the product", technical: "yes", commercial: "no", cost: "$90–250K", start: "1–2 weeks", risk: "Low" },
+    { name: "Sales Consultant", note: "Teaches the method", technical: "no", commercial: "yes", cost: "$50–150K", start: "2–4 weeks", risk: "Low" },
+    { name: "VP of Sales", note: "Owns the number", technical: "partial", commercial: "yes", cost: "$250–450K", start: "6–9 months", risk: "High" },
+    { name: "The Sales CTO", note: "Owns the gap", technical: "yes", commercial: "yes", cost: "$60–120K", start: "1–2 weeks", risk: "Low", featured: true },
+  ];
+
+  const status = (value: string) => {
+    if (value === "yes") return <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700"><Check className="size-4" strokeWidth={2.5} /> Yes</span>;
+    if (value === "partial") return <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700"><AlertTriangle className="size-4" strokeWidth={2} /> Partial</span>;
+    return <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-400"><X className="size-4" strokeWidth={2.5} /> No</span>;
+  };
+
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-              What is a Sales CTO?
-            </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
-              An established role, now available on demand.
-            </p>
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-end mb-14">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-5">The missing role in your revenue team</p>
+              <h2 className="text-3xl sm:text-5xl font-bold text-primary leading-tight text-balance">What is a Sales CTO?</h2>
+            </div>
+            <p className="text-lg text-muted leading-relaxed lg:pb-1">An established role, now available on demand — built for the moment when a technical buyer decides whether to trust you.</p>
           </div>
         </FadeIn>
+
+        <FadeIn delay={0.1}>
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 mb-14">
+            <div className="rounded-3xl bg-dark-section p-8 sm:p-10 text-white shadow-xl">
+              <p className="text-2xl sm:text-3xl font-semibold leading-tight text-balance mb-8">Your CTO builds the product. Your VP Sales sells it. Nobody owns the gap between them.</p>
+              <div className="flex items-center gap-3 text-sm text-white/60 border-t border-white/15 pt-5">
+                <span className="size-2 rounded-full bg-accent" />
+                <span>The room where technical buyers make the decision</span>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-border bg-surface p-8 sm:p-10">
+              <p className="text-lg text-foreground leading-relaxed mb-5">That gap needs its own role. In enterprise software, it&apos;s already a growing function — the <strong>Field CTO</strong>, a senior technical leader who translates complex capabilities into business value.</p>
+              <p className="text-lg text-foreground leading-relaxed">My version is a <strong>Sales CTO</strong>: delivered fractionally, on demand, and present until the deal closes.</p>
+            </div>
+          </div>
+        </FadeIn>
+
         <FadeIn delay={0.2}>
-          <div className="bg-surface rounded-2xl p-8 sm:p-12 border border-border glow">
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              Your CTO builds the product. Your VP Sales sells it. Nobody owns
-              the gap between them - the room where a technical buyer decides
-              whether to trust you.
-            </p>
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              That gap needs its own role. In enterprise software, it&apos;s
-              already a growing function - the <strong>Field CTO</strong>, a
-              senior technical leader who works externally with prospects and
-              customers, translating complex capabilities into business value. I
-              call my version a <strong>Sales CTO</strong>: the Field CTO role,
-              delivered fractionally, on demand.
-            </p>
-            <p className="text-lg text-foreground leading-relaxed mb-8">
-              Not a fractional CTO who reviews your architecture and leaves. Not
-              a sales consultant who teaches a methodology and leaves. A senior
-              technical leader who sits in your enterprise deals, earns the
-              buyer&apos;s trust, and stays until the deal closes. Someone
-              who&apos;s actually sat in the room - on both sides.
-            </p>
+          <div className="rounded-3xl border border-border bg-card shadow-lg overflow-hidden">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 px-6 sm:px-8 pt-7 pb-6 border-b border-border">
+              <div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted mb-2">Role comparison</p><h3 className="text-2xl font-bold text-primary">Who owns the enterprise deal?</h3></div>
+              <p className="text-sm text-muted max-w-xs sm:text-right">The Sales CTO is the only role designed to own both sides of the room.</p>
+            </div>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left py-3 pr-4 font-semibold text-muted"></th>
-                    <th className="text-center py-3 px-3 font-semibold text-muted">
-                      Fractional CTO
-                    </th>
-                    <th className="text-center py-3 px-3 font-semibold text-muted">
-                      Sales Consultant
-                    </th>
-                    <th className="text-center py-3 px-3 font-semibold text-muted">
-                      VP of Sales
-                    </th>
-                    <th className="text-center py-3 px-3 font-semibold text-accent bg-accent/5 rounded-t-lg">
-                      The Sales CTO
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="text-foreground">
-                  <tr className="border-b border-border/50">
-                    <td className="py-3 pr-4 font-medium">Technical</td>
-                    <td className="py-3 px-3"><span className="flex justify-center"><Check className="w-4 h-4 text-emerald-500" strokeWidth={2.5} /></span></td>
-                    <td className="py-3 px-3"><span className="flex justify-center"><X className="w-4 h-4 text-red-400" strokeWidth={2.5} /></span></td>
-                    <td className="py-3 px-3"><span className="flex justify-center"><AlertTriangle className="w-4 h-4 text-amber-400" strokeWidth={2} /></span></td>
-                    <td className="py-3 px-3 bg-accent/5"><span className="flex justify-center"><Check className="w-4 h-4 text-accent" strokeWidth={2.5} /></span></td>
-                  </tr>
-                  <tr className="border-b border-border/50">
-                    <td className="py-3 pr-4 font-medium">Commercial</td>
-                    <td className="py-3 px-3"><span className="flex justify-center"><X className="w-4 h-4 text-red-400" strokeWidth={2.5} /></span></td>
-                    <td className="py-3 px-3"><span className="flex justify-center"><Check className="w-4 h-4 text-emerald-500" strokeWidth={2.5} /></span></td>
-                    <td className="py-3 px-3"><span className="flex justify-center"><Check className="w-4 h-4 text-emerald-500" strokeWidth={2.5} /></span></td>
-                    <td className="py-3 px-3 bg-accent/5"><span className="flex justify-center"><Check className="w-4 h-4 text-accent" strokeWidth={2.5} /></span></td>
-                  </tr>
-                  <tr className="border-b border-border/50">
-                    <td className="py-3 pr-4 font-medium">Cost / Year</td>
-                    <td className="text-center py-3 px-3">$90-250K</td>
-                    <td className="text-center py-3 px-3">$50-150K</td>
-                    <td className="text-center py-3 px-3">$250-450K</td>
-                    <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5">
-                      $60-120K
-                    </td>
-                  </tr>
-                  <tr className="border-b border-border/50">
-                    <td className="py-3 pr-4 font-medium">Time to start</td>
-                    <td className="text-center py-3 px-3">1-2 weeks</td>
-                    <td className="text-center py-3 px-3">2-4 weeks</td>
-                    <td className="text-center py-3 px-3">6-9 months</td>
-                    <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5">
-                      1-2 weeks
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 pr-4 font-medium">Failure rate</td>
-                    <td className="text-center py-3 px-3 text-muted">Low</td>
-                    <td className="text-center py-3 px-3 text-muted">Low</td>
-                    <td className="text-center py-3 px-3 text-red-500 font-semibold">
-                      High
-                    </td>
-                    <td className="text-center py-3 px-3 text-accent font-bold bg-accent/5 rounded-b-lg">
-                      Low
-                    </td>
-                  </tr>
+              <table className="w-full min-w-[760px] text-sm">
+                <thead><tr className="bg-surface text-left"><th className="w-[22%] px-6 py-5 font-semibold text-muted">Capability</th>{roles.map((role) => <th key={role.name} className={`px-4 py-5 ${role.featured ? "bg-accent/10" : ""}`}><p className={`font-bold ${role.featured ? "text-accent" : "text-primary"}`}>{role.name}</p><p className="font-normal text-xs text-muted mt-1">{role.note}</p></th>)}</tr></thead>
+                <tbody>
+                  <tr><td colSpan={5} className="px-6 pt-6 pb-3 text-xs font-semibold uppercase tracking-[0.16em] text-muted">What they own</td></tr>
+                  <tr className="border-t border-border"><td className="px-6 py-5 font-medium text-primary">Technical credibility</td>{roles.map((role) => <td key={role.name} className={`px-4 py-5 ${role.featured ? "bg-accent/10" : ""}`}>{status(role.technical)}</td>)}</tr>
+                  <tr className="border-t border-border"><td className="px-6 py-5 font-medium text-primary">Commercial ownership</td>{roles.map((role) => <td key={role.name} className={`px-4 py-5 ${role.featured ? "bg-accent/10" : ""}`}>{status(role.commercial)}</td>)}</tr>
+                  <tr><td colSpan={5} className="px-6 pt-6 pb-3 text-xs font-semibold uppercase tracking-[0.16em] text-muted">Investment &amp; risk</td></tr>
+                  {[["Cost / year", "cost"], ["Time to start", "start"], ["Failure rate", "risk"]].map(([label, key]) => <tr key={key} className="border-t border-border"><td className="px-6 py-5 font-medium text-primary">{label}</td>{roles.map((role) => <td key={role.name} className={`px-4 py-5 ${role.featured ? "bg-accent/10 font-bold text-accent" : "text-muted"}`}>{role[key as "cost" | "start" | "risk"]}</td>)}</tr>)}
                 </tbody>
               </table>
-              <p className="text-xs text-muted mt-3 text-left">
-                Failure rate: the share of hires who underperform or leave within their first 18 months in the role. A full-time VP of Sales carries the highest risk of a costly hire that doesn&apos;t work out.
-              </p>
             </div>
+            <div className="flex items-start gap-3 border-t border-border bg-surface px-6 sm:px-8 py-5 text-xs text-muted leading-relaxed"><AlertTriangle className="size-4 shrink-0 text-amber-500 mt-0.5" /> <p>Failure rate means the share of hires who underperform or leave within their first 18 months. A full-time VP of Sales carries the highest risk of a costly hire that doesn&apos;t work out.</p></div>
           </div>
         </FadeIn>
       </div>
